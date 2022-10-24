@@ -21,3 +21,4 @@ data = {'t_i': ti,
 df_pointone = pd.DataFrame(data)
 df_pointone.to_csv('~/Desktop/Irene/data_pointone.csv', index = False)
 
+  
