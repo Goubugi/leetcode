@@ -1,12 +1,12 @@
 import numpy as np
 import pandas as pd
 
-ti = np.arange(0.1, 5.1, 0.1)
+ti = np.arange(0.025, 5.025, 0.025)
 w_cache = [0]
 
 
 def f(t, h, w_previous):
-    w = w_previous + h*((np.exp(t)*np.sin(t)) + ((h/2) * np.exp(t)*(np.cos(t) + np.sin(t)))
+    w =  h*((np.exp(t)*np.sin(t)) + ((h/2) * np.exp(t)*(np.cos(t) + np.sin(t)))
                            + (((h**2)/3)*np.exp(t) * np.cos(t))
                            + (((h**3)/12)*(np.exp(t)*np.cos(t) - np.exp(t*np.sin(t))))
                            )
@@ -19,6 +19,6 @@ for t in ti:
 data = {'t_i': ti,
         'w_i': w_cache[1:]}
 df_pointone = pd.DataFrame(data)
-df_pointone.to_csv('~/Desktop/Irene/data_pointone.csv', index = False)
+df_pointone.to_csv('~/Desktop/Irene/data_zero_points_zero_two_five.csv', index = False)
 
   
